@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Chiều cao:</p>
+<input id="height" type="number" name="abc">
+<p>Cân nặng:</p>
+<input id="nang" type="number" name="bcd"><br><br>
+<button onclick="getBmi()">Nhập</button>
+<script>
+    function getBmi() {
+        let weight = document.getElementById("nang").value;
+        let height = document.getElementById("height").value;
+        let bmi = weight / (height * height);
+        if (bmi > 30) {
+            alert("Béo phì");
+        } else if (bmi > 25) {
+            alert("over weight");
+        } else if (bmi > 18) {
+            alert("Normal");
+        } else {
+            alert("suy dinh dưỡng")
+        }
+
+
+    }
+</script>
+</body>
+</html>
